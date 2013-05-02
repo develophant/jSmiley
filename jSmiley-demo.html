@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jSmiley demo</title>
+	<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+	<script src="jSmiley.js"></script>
+	<script>
+
+
+	$(function () {
+
+		var smiley = $("#smiley");
+		smiley.width(400);
+		smiley.height(400);
+		smiley.jSmiley();
+
+		$('.ui-slider').width(350);
+		var slider = $("#smile-slider");
+		slider.val(smiley.jSmiley("happiness"));
+		slider.slider('refresh');
+
+		slider.bind( "change", function(event, ui) {
+			smiley.jSmiley("happiness", $(this).val());
+		});
+	});
+	</script>
+</head>
+<body>
+	<div data-role="page">
+		<div data-role="content">
+			<input type="range" name="smile-slider" id="smile-slider" min="-1" max="1" step="0.02"/>
+			<div id="smiley"></div>
+		</div>
+	</div>
+</body>
+</html>
