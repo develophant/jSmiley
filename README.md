@@ -16,13 +16,13 @@ A simple jQuery plugin (html5) for generating happy, neutral and sad smileys.
 				smiley.height(400);
 
 				// Intialize the smiley, the happiness parameter goes from -1 (sad) to 1 (happy).
-				smiley.jSmiley({happiness:1});
+				smiley.jSmiley({happiness:-1});
 
 				// You can get the current happiness of the smiley
 				console.log("happiness: " + smiley.jSmiley("happiness"));
 
-				// Make the smiley sad
-				smiley.jSmiley("happiness", -1);
+				// Make the smiley happy
+				smiley.jSmiley("happiness", 1);
 			});
 		</script>
 	</head>
