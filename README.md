@@ -4,7 +4,7 @@ jSmiley
 A simple jQuery plugin (html5) for generating happy, neutral and sad smileys.
 
 ### Example
-`````javascript
+`````html
 <html>
 	<head>
 		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
